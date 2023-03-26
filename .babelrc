@@ -1,0 +1,13 @@
+{
+    "plugins": [
+      ["module-resolver", {
+        "alias": {
+          "~": "./src"          
+        }
+      }]
+    ]
+  }
+
+
+// Ví dụ cách import khi dùng thư viện
+// import App from '`/App'

@@ -1,0 +1,23 @@
+// Menu
+.content {
+    width: 224px;
+
+    .fix-mar-btn {
+        margin-left: 0;
+    }
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+}
+
+.fix-mar-btn {
+    width: 100%;
+    padding: 11px 16px;
+    justify-content: flex-start;
+    border-radius: 0;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}

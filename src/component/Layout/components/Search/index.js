@@ -45,6 +45,14 @@ function Search() {
         setShowSearch(false);
     };
 
+    // không có bắt đầu bằng dấu cách
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
+    };
+
     return (
         <HeadlessTippy
             interactive
@@ -67,7 +75,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Tìm kiếm nội dung..."
                     spellCheck={false}
-                    onChange={(e) => setSearchValue(e.target.value)}
+                    onChange={handleChange}
                     onFocus={() => setShowSearch(true)}
                 />
                 {!!searchValue && !loading && (
@@ -84,7 +92,7 @@ function Search() {
                 )}
                 {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
 
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                     <SearchIcon />
                 </button>
             </div>

@@ -8,8 +8,6 @@ function App() {
         <Router>
             <div className="App">
                 <Routes>
-                    {/* <Route path="/" element={<Home />} />
-                    <Route path="/following" element={<Following />} /> */}
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;
 
